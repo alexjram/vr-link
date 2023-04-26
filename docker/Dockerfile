@@ -16,3 +16,6 @@ RUN yum install glibc.i686 -y
 RUN cd /app/license/LicenseManager/dongle_drivers && tar -xzf aksusbd-redhat-suse-8.53.tar.gz && \
     cd /app/license/LicenseManager/dongle_drivers/Sentinel_LDK_RedHat_and_SuSE_RPM_Run-time_Installer/ && ls && \
     rpm -i aksusbd-8.53-1.x86_64.rpm && export FLEXID_LIBRARY_PATH=$FLEXID_LIBRARY_PATH:.
+RUN yum install gcc gcc-c++ make -y
+
+RUN cd /app/vrlink/vrlink5.8/examples/ && make

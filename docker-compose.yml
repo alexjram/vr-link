@@ -5,3 +5,5 @@ services:
     container_name: vr-link
     build:
       context: ./docker
+    volumes:
+      - "./vrlink/:/app/vrlink/"
